@@ -1,0 +1,412 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+.navbar {
+  background-color: #e2dbdb;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Tetap tinggi tapi di bawah pop-up */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #27645f;
+  font-size: 2.7rem;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.navbar a:hover {
+  color: #ffdd57;
+}
+
+.logo img {
+  width: 150px;
+  height: auto;
+}
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background: none; /* Menghapus latar belakang */
+  border: none; /* Menghapus border */
+  font-size: 70px;
+  width: 50px;
+  height: 150px;
+}
+
+.prev {
+  left: 50px;
+}
+
+.next {
+  right: 50px;
+}
+
+.slide-button:hover {
+  background-color: #ddd;
+}
+
+.content {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  width: 320%;
+  height: 340px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-top: 20px;
+  opacity: 0; /* Start hidden */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.card:active {
+  opacity: 0.7;
+}
+
+.card img {
+  width: 50%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.card-utama {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  width: 700px;
+  height: 450px;
+  margin-top: 10%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.card-utama:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.card-utama:active {
+  opacity: 0.7;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.logo img {
+  height: 60px;
+  width: 160px;
+  margin-bottom: 10px;
+}
+
+.popup {
+  width: 70%;
+  height: 40vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 200px;
+  margin-left: 15%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+  z-index: 2000; /* Lebih tinggi dari navbar */
+}
+
+.popup-content {
+  width: 80%;
+  background-color: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.25);
+  opacity: 0;
+  transition: all 0.5s 0.1s;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.popup-close:link,
+.popup-close:visited {
+  position: absolute;
+  top: 12px;
+  right: 12px; /* Ubah dari left ke right */
+  text-decoration: none;
+  color: #000000;
+  font-size: 30px;
+  display: inline-block;
+  line-height: 1;
+  transition: all 0.3s;
+}
+
+.popup-close:hover,
+.popup-close:active {
+  color: #555;
+}
+
+/* Active Popup Styles */
+#popup1:target,
+#popup2:target,
+#popup3:target,
+#popup4:target,
+#popup5:target,
+#popup6:target,
+#popup7:target,
+#popupabout:target,
+#popupcontact:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+#popup1:target .popup-content,
+#popup2:target .popup-content,
+#popup3:target .popup-content,
+#popup4:target .popup-content,
+#popup5:target .popup-content,
+#popup6:target .popup-content,
+#popup7:target .popup-content,
+#popupabout:target .popup-content,
+#popupcontact:target .popup-content {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Media Queries */
+
+/* Untuk layar besar (desktop) */
+@media (min-width: 1024px) {
+  .cards {
+    flex-wrap: nowrap;
+  }
+  .card {
+    width: 320px;
+    height: 340px;
+  }
+}
+
+/* Untuk tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .cards {
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  .card {
+    width: 45%;
+    height: auto;
+  }
+}
+
+/* Untuk layar kecil (mobile) */
+@media (max-width: 767px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #008c85;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+  .cards {
+    flex-wrap: wrap;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 90%;
+    height: auto;
+  }
+  .slideshow {
+    height: 400px;
+  }
+  .prev,
+  .next {
+    width: 30px;
+    height: 100px;
+  }
+  .popup-content {
+    width: 90%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card.fade-in {
+  animation: fadeIn 0.5s forwards; /* Apply animation */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  opacity: 0.8;
+}
+
+.card:active {
+  opacity: 0.7;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  width: 320px;
+  height: 340px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin-top: 50px;
+}
+
+.card.fade-in {
+  opacity: 0; /* Start hidden */
+  animation: fadeIn 0.5s forwards; /* Apply animation */
+}
+
+.card:nth-child(1).fade-in {
+  animation-delay: 0.5s;
+}
+
+.card:nth-child(2).fade-in {
+  animation-delay: 1s;
+}
+
+.card:nth-child(3).fade-in {
+  animation-delay: 1.5s;
+}
+
+.card:nth-child(4).fade-in {
+  animation-delay: 2s;
+}
+
+.card:nth-child(5).fade-in {
+  animation-delay: 2.5s;
+}
+
+.card:nth-child(6).fade-in {
+  animation-delay: 3s;
+}

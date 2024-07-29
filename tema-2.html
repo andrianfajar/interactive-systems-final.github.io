@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Display</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo" onclick="location.href='index.html#home'">
+        <img src="images/logo.png" style="width: 320px; height: 120px" />
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html"><b>Home</b></a>
+        </li>
+        <li>
+          <a href="#popup1"><b>About us</b></a>
+        </li>
+        <li>
+          <a href="#popup2"><b>Contact</b></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="popup" id="popup1">
+      <div class="popup-content">
+        <div class="slideshow" id="slideshow1">
+          <div class="slide">
+            <img src="images/About.png" />
+          </div>
+        </div>
+        <a href="#" class="popup-close">&times;</a>
+      </div>
+    </div>
+
+    <div class="popup" id="popup2">
+      <div class="popup-content">
+        <div class="slideshow" id="slideshow2">
+          <div class="slide">
+            <img src="images/Contact us.png" />
+          </div>
+        </div>
+        <a href="#" class="popup-close">&times;</a>
+      </div>
+    </div>
+
+    <div class="product-page">
+      <div class="cards">
+        <a href="#popup3">
+          <div class="card">
+            <img src="Upload/1 per 6.png" alt="Card 1" />
+            <div class="card-l"></div>
+          </div>
+        </a>
+        <a href="#popup4">
+          <div class="card">
+            <img src="Upload/2 per 6.png " alt="Card 2" />
+            <div class="card-l"></div>
+          </div>
+        </a>
+        <a href="#popup5">
+          <div class="card">
+            <img src="Upload/3 per 6.png" alt="Card 3" />
+            <div class="card-l"></div>
+          </div>
+        </a>
+      </div>
+      <div class="cards">
+        <a href="#popup6">
+          <div class="card">
+            <img src="Upload/4 per 6.png" alt="Card 4" />
+          </div>
+        </a>
+        <a href="home-5.html">
+          <div class="card">
+            <img src="Upload/5 per 6.png" alt="Card 5" />
+          </div>
+        </a>
+        <a href="#popup7">
+          <div class="card">
+            <img src="Upload/6 per 6.png" alt="Card 5" />
+          </div>
+        </a>
+      </div>
+      <div class="img-back">
+        <a href="index.html">
+          <img src="images/back.png" />
+        </a>
+      </div>
+    </div>
+
+    <div class="popup" id="popup3">
+      <div class="popup-content">
+        <div class="slideshow" id="slideshow3">
+          <div class="slide">
+            <img src="Upload/2/21/21 copy.png" />
+          </div>
+        </div>
+        <a href="#" class="popup-close">&times;</a>
+      </div>
+    </div>
+
+    <div class="popup" id="popup4">
+      <div class="popup-content">
+        <div class="slideshow" id="slideshow4">
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/22/221.png" alt="Slide 2" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/22/222.png" alt="Slide 3" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/22/223.png" alt="Slide 3" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/22/224.png" alt="Slide 3" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/22/225.png" alt="Slide 3" />
+          </div>
+        </div>
+        <a href="#" class="popup-close">&times;</a>
+      </div>
+      <button class="prev" onclick="prevSlide('slideshow4')">&#10094;</button>
+      <button class="next" onclick="nextSlide('slideshow4')">&#10095;</button>
+    </div>
+
+    <div class="popup" id="popup5">
+      <div class="popup-content">
+        <div class="slideshow" id="slideshow5">
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/23/231.png" alt="Slide 2" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/23/232.png" alt="Slide 3" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/23/233.png" alt="Slide 3" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/23/234.png" alt="Slide 3" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/23/235.png" alt="Slide 3" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/23/236.png" alt="Slide 3" />
+          </div>
+        </div>
+        <a href="#" class="popup-close">&times;</a>
+      </div>
+      <button class="prev" onclick="prevSlide('slideshow5')">&#10094;</button>
+      <button class="next" onclick="nextSlide('slideshow5')">&#10095;</button>
+    </div>
+
+    <div class="popup" id="popup6">
+      <div class="popup-content">
+        <div class="slideshow" id="slideshow6">
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/241.png"  />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/242.png"  />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/243.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/244.png"  />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/245.png"  />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/246.png"  />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/247.png"  />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/248.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/249.png"  />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/2410.png"  />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/2411.png"  />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/2412.png" alt="Slide 2" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/2413.png" alt="Slide 2" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/2414.png" alt="Slide 2" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/24/2415.png" alt="Slide 2" />
+          </div>
+        </div>
+        <a href="#" class="popup-close">&times;</a>
+      </div>
+      <button class="prev" onclick="prevSlide('slideshow6')">&#10094;</button>
+      <button class="next" onclick="nextSlide('slideshow6')">&#10095;</button>
+    </div>
+
+    <div class="popup" id="popup7">
+      <div class="popup-content">
+        <div class="slideshow" id="slideshow7">
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/261.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/262.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/263.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/264.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/265.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/266.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/267.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/268.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/269.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/2610.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/2611.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/2612.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/2613.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/2614.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/2615.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/2616.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/2617.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/2618.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/2619.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/2620.png" />
+          </div>
+          <div class="slide">
+            <img src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/26/2621.png" />
+          </div>
+        </div>
+        <a href="#" class="popup-close">&times;</a>
+      </div>
+      <button class="prev" onclick="prevSlide('slideshow7')">&#10094;</button>
+      <button class="next" onclick="nextSlide('slideshow7')">&#10095;</button>
+    </div>
+
+    <script src="script1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Display</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo" onclick="location.href='index.html#home'">
+        <img src="images/logo.png" style="width: 320px; height: 120px" />
+      </div>
+      <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links">
+        <li>
+          <a href="index.html"><b>Home</b></a>
+        </li>
+        <li>
+          <a href="#popup1"><b>About us</b></a>
+        </li>
+        <li>
+          <a href="#popup2"><b>Contact</b></a>
+        </li>
+      </ul>
+    </nav>
+    <div class="product-page">
+      <div class="cards">
+        <a href="tema-1.html">
+          <div class="card-utama">
+            <img
+              src="PROJECT TANPA PSD/TEMA 1 TAMAT CUK/menuju bisnis berkelanjutan.png"
+              alt="Card 1"
+            />
+          </div>
+        </a>
+        <a href="tema-2.html">
+          <div class="card-utama">
+            <img
+              src="PROJECT TANPA PSD/TEMA 2 TAMAT CUK/menuju ketahanan pangan copy.png"
+              alt="Card 2"
+            />
+          </div>
+        </a>
+      </div>
+    </div>
+    <script src="script1.js"></script>
+
+    <div class="popup" id="popup1">
+      <div class="popup-content">
+        <div class="slideshow" id="slideshow1">
+          <div class="slide">
+            <img src="images/About.png" />
+          </div>
+        </div>
+        <a href="#" class="popup-close">&times;</a>
+      </div>
+    </div>
+
+    <div class="popup" id="popup2">
+      <div class="popup-content">
+        <div class="slideshow" id="slideshow1">
+          <div class="slide">
+            <img src="images/Contact us.png" />
+          </div>
+        </div>
+        <a href="#" class="popup-close">&times;</a>
+      </div>
+    </div>
+  </body>
+</html>
